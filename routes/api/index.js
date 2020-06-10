@@ -1,9 +1,19 @@
 const router = require('express').Router();
-const apiRoutes = require('.');
-
 
 const userRoutes = require('./user-routes');
 const postRoutes = require('./post-routes');
+
+router.use('/users', userRoutes);
+router.use('/posts', postRoutes);
+
+module.exports = router;
+
+
+
+
+const apiRoutes = require('.');
+
+
 
 
 router.use('/users', userRoutes);
